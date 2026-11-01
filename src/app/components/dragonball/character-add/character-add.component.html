@@ -1,0 +1,30 @@
+<h2>Agregar</h2>
+
+<h3>Personaje: {{ name() }}</h3>
+
+<input 
+    type="text" 
+    class="form-control" 
+    placeholder="ejemplo: goku" 
+    [value]="name()"
+    (input)="name.set(txtName.value)" 
+    #txtName
+/>
+
+<h3>Poder: {{ power() }}</h3>
+
+<input 
+    type="number" 
+    class="form-controlmt-2" 
+    placeholder="ejemplo: 250"
+    [value]="power()"
+    (input)="power.set(txtPower.valueAsNumber)" 
+    #txtPower
+/>
+
+<button 
+    (click)="addCharacter()" 
+    class="mt-2 btn btn-primary"
+> 
+Agregar
+</button>
